@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		711A2FF22267867B00EAABCD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A2FF12267867B00EAABCD /* AppDelegate.swift */; };
+		711A2FF42267867B00EAABCD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A2FF32267867B00EAABCD /* ViewController.swift */; };
+		711A2FF72267867B00EAABCD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 711A2FF52267867B00EAABCD /* Main.storyboard */; };
+		711A2FF92267867C00EAABCD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 711A2FF82267867C00EAABCD /* Assets.xcassets */; };
+		711A2FFC2267867C00EAABCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 711A2FFA2267867C00EAABCD /* LaunchScreen.storyboard */; };
+		711A30072267867C00EAABCD /* GoldenScent_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A30062267867C00EAABCD /* GoldenScent_TestTests.swift */; };
+		711A30122267867C00EAABCD /* GoldenScent_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A30112267867C00EAABCD /* GoldenScent_TestUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		711A30032267867C00EAABCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 711A2FE62267867B00EAABCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 711A2FED2267867B00EAABCD;
+			remoteInfo = "GoldenScent Test";
+		};
+		711A300E2267867C00EAABCD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 711A2FE62267867B00EAABCD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 711A2FED2267867B00EAABCD;
+			remoteInfo = "GoldenScent Test";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		711A2FEE2267867B00EAABCD /* GoldenScent Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "GoldenScent Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		711A2FF12267867B00EAABCD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		711A2FF32267867B00EAABCD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		711A2FF62267867B00EAABCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		711A2FF82267867C00EAABCD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		711A2FFB2267867C00EAABCD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		711A2FFD2267867C00EAABCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		711A30022267867C00EAABCD /* GoldenScent TestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoldenScent TestTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		711A30062267867C00EAABCD /* GoldenScent_TestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldenScent_TestTests.swift; sourceTree = "<group>"; };
+		711A30082267867C00EAABCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		711A300D2267867C00EAABCD /* GoldenScent TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoldenScent TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		711A30112267867C00EAABCD /* GoldenScent_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldenScent_TestUITests.swift; sourceTree = "<group>"; };
+		711A30132267867C00EAABCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		711A2FEB2267867B00EAABCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		711A2FFF2267867C00EAABCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		711A300A2267867C00EAABCD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		711A2FE52267867B00EAABCD = {
+			isa = PBXGroup;
+			children = (
+				711A2FF02267867B00EAABCD /* GoldenScent Test */,
+				711A30052267867C00EAABCD /* GoldenScent TestTests */,
+				711A30102267867C00EAABCD /* GoldenScent TestUITests */,
+				711A2FEF2267867B00EAABCD /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		711A2FEF2267867B00EAABCD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				711A2FEE2267867B00EAABCD /* GoldenScent Test.app */,
+				711A30022267867C00EAABCD /* GoldenScent TestTests.xctest */,
+				711A300D2267867C00EAABCD /* GoldenScent TestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		711A2FF02267867B00EAABCD /* GoldenScent Test */ = {
+			isa = PBXGroup;
+			children = (
+				711A2FF12267867B00EAABCD /* AppDelegate.swift */,
+				711A2FF32267867B00EAABCD /* ViewController.swift */,
+				711A2FF52267867B00EAABCD /* Main.storyboard */,
+				711A2FF82267867C00EAABCD /* Assets.xcassets */,
+				711A2FFA2267867C00EAABCD /* LaunchScreen.storyboard */,
+				711A2FFD2267867C00EAABCD /* Info.plist */,
+			);
+			path = "GoldenScent Test";
+			sourceTree = "<group>";
+		};
+		711A30052267867C00EAABCD /* GoldenScent TestTests */ = {
+			isa = PBXGroup;
+			children = (
+				711A30062267867C00EAABCD /* GoldenScent_TestTests.swift */,
+				711A30082267867C00EAABCD /* Info.plist */,
+			);
+			path = "GoldenScent TestTests";
+			sourceTree = "<group>";
+		};
+		711A30102267867C00EAABCD /* GoldenScent TestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				711A30112267867C00EAABCD /* GoldenScent_TestUITests.swift */,
+				711A30132267867C00EAABCD /* Info.plist */,
+			);
+			path = "GoldenScent TestUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		711A2FED2267867B00EAABCD /* GoldenScent Test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 711A30162267867C00EAABCD /* Build configuration list for PBXNativeTarget "GoldenScent Test" */;
+			buildPhases = (
+				711A2FEA2267867B00EAABCD /* Sources */,
+				711A2FEB2267867B00EAABCD /* Frameworks */,
+				711A2FEC2267867B00EAABCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "GoldenScent Test";
+			productName = "GoldenScent Test";
+			productReference = 711A2FEE2267867B00EAABCD /* GoldenScent Test.app */;
+			productType = "com.apple.product-type.application";
+		};
+		711A30012267867C00EAABCD /* GoldenScent TestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 711A30192267867C00EAABCD /* Build configuration list for PBXNativeTarget "GoldenScent TestTests" */;
+			buildPhases = (
+				711A2FFE2267867C00EAABCD /* Sources */,
+				711A2FFF2267867C00EAABCD /* Frameworks */,
+				711A30002267867C00EAABCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				711A30042267867C00EAABCD /* PBXTargetDependency */,
+			);
+			name = "GoldenScent TestTests";
+			productName = "GoldenScent TestTests";
+			productReference = 711A30022267867C00EAABCD /* GoldenScent TestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		711A300C2267867C00EAABCD /* GoldenScent TestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 711A301C2267867C00EAABCD /* Build configuration list for PBXNativeTarget "GoldenScent TestUITests" */;
+			buildPhases = (
+				711A30092267867C00EAABCD /* Sources */,
+				711A300A2267867C00EAABCD /* Frameworks */,
+				711A300B2267867C00EAABCD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				711A300F2267867C00EAABCD /* PBXTargetDependency */,
+			);
+			name = "GoldenScent TestUITests";
+			productName = "GoldenScent TestUITests";
+			productReference = 711A300D2267867C00EAABCD /* GoldenScent TestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		711A2FE62267867B00EAABCD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = Raees;
+				TargetAttributes = {
+					711A2FED2267867B00EAABCD = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					711A30012267867C00EAABCD = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 711A2FED2267867B00EAABCD;
+					};
+					711A300C2267867C00EAABCD = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 711A2FED2267867B00EAABCD;
+					};
+				};
+			};
+			buildConfigurationList = 711A2FE92267867B00EAABCD /* Build configuration list for PBXProject "GoldenScent Test" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 711A2FE52267867B00EAABCD;
+			productRefGroup = 711A2FEF2267867B00EAABCD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				711A2FED2267867B00EAABCD /* GoldenScent Test */,
+				711A30012267867C00EAABCD /* GoldenScent TestTests */,
+				711A300C2267867C00EAABCD /* GoldenScent TestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		711A2FEC2267867B00EAABCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				711A2FFC2267867C00EAABCD /* LaunchScreen.storyboard in Resources */,
+				711A2FF92267867C00EAABCD /* Assets.xcassets in Resources */,
+				711A2FF72267867B00EAABCD /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		711A30002267867C00EAABCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		711A300B2267867C00EAABCD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		711A2FEA2267867B00EAABCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				711A2FF42267867B00EAABCD /* ViewController.swift in Sources */,
+				711A2FF22267867B00EAABCD /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		711A2FFE2267867C00EAABCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				711A30072267867C00EAABCD /* GoldenScent_TestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		711A30092267867C00EAABCD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				711A30122267867C00EAABCD /* GoldenScent_TestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		711A30042267867C00EAABCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 711A2FED2267867B00EAABCD /* GoldenScent Test */;
+			targetProxy = 711A30032267867C00EAABCD /* PBXContainerItemProxy */;
+		};
+		711A300F2267867C00EAABCD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 711A2FED2267867B00EAABCD /* GoldenScent Test */;
+			targetProxy = 711A300E2267867C00EAABCD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		711A2FF52267867B00EAABCD /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				711A2FF62267867B00EAABCD /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		711A2FFA2267867C00EAABCD /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				711A2FFB2267867C00EAABCD /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		711A30142267867C00EAABCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		711A30152267867C00EAABCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		711A30172267867C00EAABCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GoldenScent Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myapp.goldenscenttest.GoldenScent-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		711A30182267867C00EAABCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GoldenScent Test/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myapp.goldenscenttest.GoldenScent-Test";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		711A301A2267867C00EAABCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GoldenScent TestTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myapp.goldenscenttest.GoldenScent-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoldenScent Test.app/GoldenScent Test";
+			};
+			name = Debug;
+		};
+		711A301B2267867C00EAABCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GoldenScent TestTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myapp.goldenscenttest.GoldenScent-TestTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GoldenScent Test.app/GoldenScent Test";
+			};
+			name = Release;
+		};
+		711A301D2267867C00EAABCD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GoldenScent TestUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myapp.goldenscenttest.GoldenScent-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "GoldenScent Test";
+			};
+			name = Debug;
+		};
+		711A301E2267867C00EAABCD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "GoldenScent TestUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.myapp.goldenscenttest.GoldenScent-TestUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "GoldenScent Test";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		711A2FE92267867B00EAABCD /* Build configuration list for PBXProject "GoldenScent Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				711A30142267867C00EAABCD /* Debug */,
+				711A30152267867C00EAABCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		711A30162267867C00EAABCD /* Build configuration list for PBXNativeTarget "GoldenScent Test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				711A30172267867C00EAABCD /* Debug */,
+				711A30182267867C00EAABCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		711A30192267867C00EAABCD /* Build configuration list for PBXNativeTarget "GoldenScent TestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				711A301A2267867C00EAABCD /* Debug */,
+				711A301B2267867C00EAABCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		711A301C2267867C00EAABCD /* Build configuration list for PBXNativeTarget "GoldenScent TestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				711A301D2267867C00EAABCD /* Debug */,
+				711A301E2267867C00EAABCD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 711A2FE62267867B00EAABCD /* Project object */;
+}
