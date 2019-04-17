@@ -14,6 +14,8 @@
 		711A2FFC2267867C00EAABCD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 711A2FFA2267867C00EAABCD /* LaunchScreen.storyboard */; };
 		711A30072267867C00EAABCD /* GoldenScent_TestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A30062267867C00EAABCD /* GoldenScent_TestTests.swift */; };
 		711A30122267867C00EAABCD /* GoldenScent_TestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A30112267867C00EAABCD /* GoldenScent_TestUITests.swift */; };
+		711A3025226787AC00EAABCD /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A3024226787AC00EAABCD /* Category.swift */; };
+		711A3027226787BF00EAABCD /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 711A3026226787BF00EAABCD /* Product.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		711A300D2267867C00EAABCD /* GoldenScent TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "GoldenScent TestUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		711A30112267867C00EAABCD /* GoldenScent_TestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldenScent_TestUITests.swift; sourceTree = "<group>"; };
 		711A30132267867C00EAABCD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		711A3024226787AC00EAABCD /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		711A3026226787BF00EAABCD /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,11 @@
 		711A2FF02267867B00EAABCD /* GoldenScent Test */ = {
 			isa = PBXGroup;
 			children = (
-				711A2FF12267867B00EAABCD /* AppDelegate.swift */,
-				711A2FF32267867B00EAABCD /* ViewController.swift */,
-				711A2FF52267867B00EAABCD /* Main.storyboard */,
-				711A2FF82267867C00EAABCD /* Assets.xcassets */,
-				711A2FFA2267867C00EAABCD /* LaunchScreen.storyboard */,
-				711A2FFD2267867C00EAABCD /* Info.plist */,
+				711A301F226786E500EAABCD /* Application */,
+				711A3021226786FF00EAABCD /* Model */,
+				711A3020226786F800EAABCD /* View */,
+				711A30222267870D00EAABCD /* Controllers */,
+				711A30232267871500EAABCD /* Resources */,
 			);
 			path = "GoldenScent Test";
 			sourceTree = "<group>";
@@ -123,6 +126,49 @@
 				711A30132267867C00EAABCD /* Info.plist */,
 			);
 			path = "GoldenScent TestUITests";
+			sourceTree = "<group>";
+		};
+		711A301F226786E500EAABCD /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				711A2FF12267867B00EAABCD /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		711A3020226786F800EAABCD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				711A2FF52267867B00EAABCD /* Main.storyboard */,
+				711A2FFA2267867C00EAABCD /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		711A3021226786FF00EAABCD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				711A3024226787AC00EAABCD /* Category.swift */,
+				711A3026226787BF00EAABCD /* Product.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		711A30222267870D00EAABCD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				711A2FF32267867B00EAABCD /* ViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		711A30232267871500EAABCD /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				711A2FFD2267867C00EAABCD /* Info.plist */,
+				711A2FF82267867C00EAABCD /* Assets.xcassets */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -257,7 +303,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				711A2FF42267867B00EAABCD /* ViewController.swift in Sources */,
+				711A3027226787BF00EAABCD /* Product.swift in Sources */,
 				711A2FF22267867B00EAABCD /* AppDelegate.swift in Sources */,
+				711A3025226787AC00EAABCD /* Category.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -433,12 +481,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "GoldenScent Test/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/GoldenScent Test/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.myapp.goldenscenttest.GoldenScent-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.goldenscenttest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -450,12 +498,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "GoldenScent Test/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/GoldenScent Test/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.myapp.goldenscenttest.GoldenScent-Test";
+				PRODUCT_BUNDLE_IDENTIFIER = com.myapp.goldenscenttest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
