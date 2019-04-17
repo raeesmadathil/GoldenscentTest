@@ -12,7 +12,7 @@ class Product: NSObject {
 
     var name:String!
     var icon:UIImage!
-    var brand:String!
+    var info:String!
     var originalPrice:String!
     var offerPrice:String!
 }
