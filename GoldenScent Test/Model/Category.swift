@@ -37,16 +37,16 @@ class Category: NSObject {
         prada.originalPrice     =   "356 SR"
         
         let dolce               =   Product()
-        dolce.name              =   "DOLCE & GABBANA"
-        dolce.info              =   "The One and text goes until it"
+        dolce.name              =   "DOLCE & GABBANA DOLCE & GABBANA"
+        dolce.info              =   "The One and text goes until it branded,The One and text "
         dolce.icon              =   UIImage(named: "icon_dolce")
-        dolce.offerPrice        =   "356 SR"
+        dolce.originalPrice     =   "356 SR"
         
         let aigner              =   Product()
         aigner.name             =   "AIGNER"
         aigner.info             =   "N. I"
         aigner.icon             =   UIImage(named: "icon_aigner")
-        aigner.offerPrice       =   "356 SR"
+        aigner.originalPrice    =   "356 SR"
         
         var besSellers          =   [[Product]]()
         for _ in 0...3{

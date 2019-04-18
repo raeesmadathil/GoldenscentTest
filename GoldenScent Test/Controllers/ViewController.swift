@@ -11,11 +11,44 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var tblCategories: UITableView!
+    @IBOutlet weak var tblSubCategories: UITableView!
+    @IBOutlet weak var imgBanner: UIImageView!
+    
     let categories      =   Category.getCategories()
+    var selectedCategory:Category!
+    
+    var bestSellerVcs   =   [BestSellersTableViewController]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        selectedCategory        =   categories.first
+        updateSubcategoryDetails()
     }
 
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if let besetSellerVc    =   segue.destination as? BestSellersTableViewController{
+            
+            if segue.identifier == "bestsellers_1"{
+                bestSellerVcs.insert(besetSellerVc, at: 0)
+            }else  if segue.identifier == "bestsellers_2"{
+                bestSellerVcs.insert(besetSellerVc, at: 1)
+            }else if segue.identifier == "bestsellers_3"{
+                bestSellerVcs.insert(besetSellerVc, at: 2)
+            }
+        }
+        
+    }
+    
+    //Mark:- custom functions
+    
+    /// Update banner, best sellers and sub categories when category selected
+    func updateSubcategoryDetails(){
+        imgBanner.image     =   selectedCategory.banner
+        for index in 0...2{
+            bestSellerVcs[index].products   =   selectedCategory.besSellers[index]
+        }
+    }
 }
 
 extension ViewController:UITableViewDataSource,UITableViewDelegate{
@@ -25,14 +58,21 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
         if tableView == tblCategories{
             return categories.count
         }else{
-            return 0
+            return selectedCategory.subCategories.count
         }
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell        =   tableView.dequeueReusableCell(withIdentifier: "CategoryTableViewCell", for: indexPath) as! CategoryTableViewCell
-        cell.configure(category: categories[indexPath.row])
-        return cell
+        if tableView == tblCategories{
+            let cell        =   tableView.dequeueReusableCell(withIdentifier: "CategoryTableViewCell", for: indexPath) as! CategoryTableViewCell
+            cell.configure(category: categories[indexPath.row])
+            return cell
+        }else{
+            let cell        =   tableView.dequeueReusableCell(withIdentifier: "SubcategoryTableViewCell", for: indexPath) as! SubcategoryTableViewCell
+            cell.configure(category: categories[indexPath.row])
+            return cell
+        }
+        
     }
     
     //Mark:-UITableViewDelegate
@@ -69,3 +109,10 @@ class CategoryTableViewCell: UITableViewCell {
         
     }
 }
+class SubcategoryTableViewCell: UITableViewCell {
+    
+    func configure(category:Category){
+        
+    }
+}
+
