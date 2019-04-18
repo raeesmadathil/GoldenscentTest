@@ -94,15 +94,15 @@ class Category: NSObject {
         
         
         let skinCare            =   Category()
-        skinCare.name           =   "SKincare"
-        skinCare.icon           =   UIImage(named: "")
+        skinCare.name           =   "Skincare"
+        skinCare.icon           =   UIImage(named: "icon_skincare")
         skinCare.banner         =   UIImage(named: "banner_makeup")
         skinCare.besSellers     =   besSellers
         skinCare.subCategories  =   [lips,face,nails]
         
         let hairCare            =   Category()
         hairCare.name           =   "Haircare"
-        hairCare.icon           =   UIImage(named: "")
+        hairCare.icon           =   UIImage(named: "icon_haircare")
         hairCare.banner         =   UIImage(named: "banner_makeup")
         hairCare.besSellers     =   besSellers
         hairCare.subCategories  =   [lips,face,nails]
