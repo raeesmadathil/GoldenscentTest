@@ -219,10 +219,19 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
+                                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_arrow_up" translatesAutoresizingMaskIntoConstraints="NO" id="HL6-P8-Iki">
+                                                                    <rect key="frame" x="227" y="12.5" width="25" height="25"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" secondItem="HL6-P8-Iki" secondAttribute="height" multiplier="1:1" id="KdE-DO-HRk"/>
+                                                                        <constraint firstAttribute="width" constant="25" id="iXa-fd-Nt3"/>
+                                                                    </constraints>
+                                                                </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <constraints>
+                                                                <constraint firstItem="HL6-P8-Iki" firstAttribute="centerY" secondItem="MEb-iB-Zaq" secondAttribute="centerY" id="8mr-xr-wKb"/>
                                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="MEb-iB-Zaq" secondAttribute="trailing" constant="20" symbolic="YES" id="8vN-7e-eMk"/>
+                                                                <constraint firstAttribute="trailing" secondItem="HL6-P8-Iki" secondAttribute="trailing" constant="8" id="CNv-Tg-McJ"/>
                                                                 <constraint firstItem="MEb-iB-Zaq" firstAttribute="leading" secondItem="5mv-J9-mIG" secondAttribute="leading" constant="8" id="Yhb-Pp-0fm"/>
                                                                 <constraint firstItem="MEb-iB-Zaq" firstAttribute="centerY" secondItem="5mv-J9-mIG" secondAttribute="centerY" id="bZX-W8-T3B"/>
                                                                 <constraint firstAttribute="height" constant="50" id="kKC-lw-1He"/>
@@ -293,7 +302,7 @@
                                                                 <outlet property="delegate" destination="dfm-o0-NNj" id="EeG-Ui-oYG"/>
                                                             </connections>
                                                         </collectionView>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3Y-IO-Qxz">
+                                                        <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S3Y-IO-Qxz">
                                                             <rect key="frame" x="0.0" y="200.5" width="260" height="40"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="Ji5-N4-XeA"/>
@@ -331,6 +340,7 @@
                                             <outlet property="collViewSubCategories" destination="n8k-Wx-ib0" id="cuc-vM-s6v"/>
                                             <outlet property="constraintCollViewHeight" destination="drM-5w-bcI" id="XNA-87-ljn"/>
                                             <outlet property="constraintViewAllHeight" destination="Ji5-N4-XeA" id="HUh-fW-xHl"/>
+                                            <outlet property="imgUpDownArrow" destination="HL6-P8-Iki" id="6Av-2i-RrR"/>
                                             <outlet property="lblName" destination="MEb-iB-Zaq" id="D69-cD-Xpg"/>
                                         </connections>
                                     </tableViewCell>
@@ -492,6 +502,7 @@
     </scenes>
     <resources>
         <image name="banner_makeup" width="255" height="82"/>
+        <image name="icon_arrow_up" width="35" height="35"/>
         <image name="icon_makeup" width="60" height="60"/>
         <image name="icon_pencil" width="131" height="131"/>
         <image name="icon_prada" width="70" height="114"/>

@@ -20,7 +20,8 @@ class ViewController: UIViewController {
     var bestSellerVcs   =   [BestSellersTableViewController]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        selectedCategory        =   categories.first
+        selectedCategory                                    =   categories.first
+        selectedCategory.subCategories.first?.isToExpand    =   true
         tblCategories.selectRow(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .none)
         updateSubcategoryDetails()
     }
@@ -84,7 +85,11 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
             selectedCategory    =   categories[indexPath.row]
             updateSubcategoryDetails()
         }else{
-            
+            let subCategory         =   selectedCategory.subCategories[indexPath.row]
+            subCategory.isToExpand  =   !subCategory.isToExpand
+            tableView.beginUpdates()
+            tableView.reloadRows(at: [indexPath], with: .fade)
+            tableView.endUpdates()
         }
     }
     
@@ -125,6 +130,7 @@ class SubcategoryTableViewCell: UITableViewCell {
     @IBOutlet weak var lblName: UILabel!
     @IBOutlet weak var collViewSubCategories: UICollectionView!
     @IBOutlet weak var btnViewAll: UIButton!
+    @IBOutlet weak var imgUpDownArrow: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -149,13 +155,19 @@ class SubcategoryTableViewCell: UITableViewCell {
         self.category                       =   category
         lblName.text                        =   category.name
         
-        btnViewAll.setTitle(("View All " + category.name ), for: .normal)
-        
-        let toatlItems                      =   CGFloat(category.subCategories.count)
-        
-        constraintCollViewHeight.constant   =   ((toatlItems / CGFloat(itemPerRow)) * cellSize.height) + ((toatlItems - 1 ) * space)
-        contentView.updateConstraints()
-        collViewSubCategories.reloadData()
+        if category.isToExpand   ==  true{
+            
+            btnViewAll.setTitle(("View All " + category.name ), for: .normal)
+            
+            let toatlItems                      =   CGFloat(category.subCategories.count)
+            constraintCollViewHeight.constant   =   ((toatlItems / CGFloat(itemPerRow)) * cellSize.height) + ((toatlItems - 1 ) * space)
+            imgUpDownArrow.image                =   UIImage(named: "icon_arrow_up")
+            collViewSubCategories.reloadData()
+        }else{
+            constraintCollViewHeight.constant   =   0
+            constraintViewAllHeight.constant    =   0
+            imgUpDownArrow.image                =   UIImage(named: "icon_arrow_down")
+        }
         
     }
     

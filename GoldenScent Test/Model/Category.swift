@@ -16,7 +16,7 @@ class Category: NSObject {
     var besSellers:[[Product]]!
     var subCategories:[Category]!
     
-    
+    var isToExpand  =   false
     //Mark:- custom functions
     
     /// To get dummy categories
