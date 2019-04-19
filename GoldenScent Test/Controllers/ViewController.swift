@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedCategory        =   categories.first
+        tblCategories.selectRow(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .none)
         updateSubcategoryDetails()
     }
 
@@ -48,6 +49,7 @@ class ViewController: UIViewController {
         for index in 0...2{
             bestSellerVcs[index].products   =   selectedCategory.besSellers[index]
         }
+        tblSubCategories.reloadData()
     }
 }
 
@@ -78,6 +80,12 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
     //Mark:-UITableViewDelegate
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
+        if tableView === tblCategories{
+            selectedCategory    =   categories[indexPath.row]
+            updateSubcategoryDetails()
+        }else{
+            
+        }
     }
     
 }
