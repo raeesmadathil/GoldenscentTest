@@ -69,7 +69,7 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
             return cell
         }else{
             let cell        =   tableView.dequeueReusableCell(withIdentifier: "SubcategoryTableViewCell", for: indexPath) as! SubcategoryTableViewCell
-            cell.configure(category: categories[indexPath.row])
+            cell.configure(category: selectedCategory.subCategories[indexPath.row])
             return cell
         }
         
@@ -111,8 +111,78 @@ class CategoryTableViewCell: UITableViewCell {
 }
 class SubcategoryTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var constraintCollViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var constraintViewAllHeight: NSLayoutConstraint!
+    
+    @IBOutlet weak var lblName: UILabel!
+    @IBOutlet weak var collViewSubCategories: UICollectionView!
+    @IBOutlet weak var btnViewAll: UIButton!
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        selectionStyle      =   .none
+    }
+    var category:Category!
+    var itemPerRow      =   3
+    var space:CGFloat   =   10
+    var cellSize:CGSize{
+        let width   =   (self.frame.width / CGFloat(itemPerRow)) - 2 * space
+        let height  =   width + 30
+        return CGSize(width: width, height: height)
+    }
+    
+    //Mark:- custom functions
+    
+    /// Display the values to cell
+    ///
+    /// - Parameter category: category to display
     func configure(category:Category){
         
+        self.category                       =   category
+        lblName.text                        =   category.name
+        
+        btnViewAll.setTitle(("View All " + category.name ), for: .normal)
+        
+        let toatlItems                      =   CGFloat(category.subCategories.count)
+        
+        constraintCollViewHeight.constant   =   ((toatlItems / CGFloat(itemPerRow)) * cellSize.height) + ((toatlItems - 1 ) * space)
+        contentView.updateConstraints()
+        collViewSubCategories.reloadData()
+        
     }
+    
 }
 
+extension SubcategoryTableViewCell:UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
+    
+    //Mark:-UICollectionViewDataSource
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return category.subCategories.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell    =   collectionView.dequeueReusableCell(withReuseIdentifier: "SubCategoryCollectionViewCell", for: indexPath) as! SubCategoryCollectionViewCell
+        cell.configure(category: category.subCategories[indexPath.row])
+        return cell
+    }
+    
+    //Mark:-UICollectionViewDelegateFlowLayout
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return cellSize
+    }
+}
+class SubCategoryCollectionViewCell: UICollectionViewCell {
+    
+    @IBOutlet weak var imgIcon: UIImageView!
+    @IBOutlet weak var lblName: UILabel!
+    
+    //Mark:- custom functions
+    
+    /// Display the values to cell
+    ///
+    /// - Parameter category: category to display
+    func configure(category:Category){
+        lblName.text    =   category.name
+        imgIcon.image   =   category.icon
+    }
+}
