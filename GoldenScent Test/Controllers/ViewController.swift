@@ -20,8 +20,8 @@ class ViewController: UIViewController {
     var bestSellerVcs   =   [BestSellersTableViewController]()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
+        tblSubCategories.estimatedRowHeight                 =   251
+        tblSubCategories.rowHeight                          =   UITableView.automaticDimension
         selectedCategory                                    =   categories.first
         selectedCategory.subCategories.first?.isToExpand    =   true
         tblCategories.selectRow(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .none)
@@ -56,6 +56,8 @@ class ViewController: UIViewController {
         for index in 0...2{
             bestSellerVcs[index].products   =   selectedCategory.besSellers[index]
         }
+        selectedCategory.subCategories.forEach({$0.isToExpand = false})
+        selectedCategory.subCategories.first?.isToExpand    =   true
         tblSubCategories.reloadData()
     }
     
@@ -66,7 +68,7 @@ class ViewController: UIViewController {
             headerView.layoutIfNeeded()
             let titleHeight                 =   CGFloat(50)
             let rowheight                   =   CGFloat(110)
-            let leftColumnWidth             =   CGFloat(115)
+            let leftColumnWidth             =   CGFloat(100)
             let space                       =   CGFloat(8)
             let bannerWidthHeightRatio      =   CGFloat(0.32)
             let numberOfRows                =   3
@@ -118,6 +120,9 @@ extension ViewController:UITableViewDataSource,UITableViewDelegate{
             tableView.beginUpdates()
             tableView.reloadRows(at: [indexPath], with: .fade)
             tableView.endUpdates()
+            tableView.scrollToRow(at: indexPath,
+                                  at: UITableView.ScrollPosition.none,
+                                  animated: true)
         }
     }
     
@@ -135,7 +140,7 @@ class CategoryTableViewCell: UITableViewCell {
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         imgIcon.alpha           =   selected == true ? 1.0 : 0.5
-        lblName.font            =   selected == true ? UIFont.systemFont(ofSize: 15, weight: .medium) : UIFont.systemFont(ofSize: 15, weight: .thin)
+        lblName.font            =   selected == true ? UIFont.systemFont(ofSize: 13, weight: .medium) : UIFont.systemFont(ofSize: 13, weight: .thin)
         viewIndicator.isHidden  =   !selected
     }
     
