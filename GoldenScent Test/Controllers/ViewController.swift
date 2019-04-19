@@ -20,12 +20,18 @@ class ViewController: UIViewController {
     var bestSellerVcs   =   [BestSellersTableViewController]()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         selectedCategory                                    =   categories.first
         selectedCategory.subCategories.first?.isToExpand    =   true
         tblCategories.selectRow(at: IndexPath(item: 0, section: 0), animated: false, scrollPosition: .none)
         updateSubcategoryDetails()
     }
-
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        sizeHeaderToFit()
+        tblSubCategories.reloadData()
+    }
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
@@ -52,6 +58,28 @@ class ViewController: UIViewController {
         }
         tblSubCategories.reloadData()
     }
+    
+    /// to update the height sub categories table headerview, the banner height and width will change according to device, so we need to update the height of headerview also
+    func sizeHeaderToFit() {
+        if let headerView = tblSubCategories.tableHeaderView{
+            headerView.setNeedsLayout()
+            headerView.layoutIfNeeded()
+            let titleHeight                 =   CGFloat(50)
+            let rowheight                   =   CGFloat(110)
+            let leftColumnWidth             =   CGFloat(115)
+            let space                       =   CGFloat(8)
+            let bannerWidthHeightRatio      =   CGFloat(0.32)
+            let numberOfRows                =   3
+            let screenWidth                 =   UIScreen.main.bounds.width
+            let bannerheight                =   ((screenWidth - (leftColumnWidth + (2 * space))) * bannerWidthHeightRatio)
+            let height                      =   titleHeight + (rowheight * CGFloat(numberOfRows)) + bannerheight
+            var frame                       =   headerView.frame
+            frame.size.height               =   height
+            headerView.frame                =   frame
+            tblSubCategories.tableHeaderView    = headerView
+        }
+    }
+    
 }
 
 extension ViewController:UITableViewDataSource,UITableViewDelegate{
@@ -204,5 +232,18 @@ class SubCategoryCollectionViewCell: UICollectionViewCell {
     func configure(category:Category){
         lblName.text    =   category.name
         imgIcon.image   =   category.icon
+    }
+}
+
+class HeaderView: UIView {
+    
+    @IBOutlet weak var scrollView:UIScrollView!
+    override func hitTest(_ point: CGPoint, with event: UIEvent?) -> UIView? {
+        
+        if super.hitTest(point, with: event) == self{
+            return scrollView
+        }else{
+            return super.hitTest(point, with: event)
+        }
     }
 }

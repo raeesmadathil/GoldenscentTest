@@ -102,40 +102,40 @@
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="GgO-Db-Vs8"/>
                                 </connections>
                             </tableView>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aG6-Kb-NHY">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="aG6-Kb-NHY">
                                 <rect key="frame" x="115" y="0.0" width="260" height="1000"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <view key="tableHeaderView" contentMode="scaleToFill" id="U7m-Jq-8w4">
+                                <view key="tableHeaderView" contentMode="scaleToFill" id="U7m-Jq-8w4" customClass="HeaderView" customModule="GoldenScent_Test" customModuleProvider="target">
                                     <rect key="frame" x="0.0" y="0.0" width="260" height="462"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="banner_makeup" translatesAutoresizingMaskIntoConstraints="NO" id="Cwp-nu-2Af">
-                                            <rect key="frame" x="8" y="0.0" width="244" height="78.5"/>
+                                            <rect key="frame" x="8" y="0.0" width="244" height="78"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" secondItem="Cwp-nu-2Af" secondAttribute="height" multiplier="255:82" id="hCJ-5z-7aE"/>
+                                                <constraint firstAttribute="width" secondItem="Cwp-nu-2Af" secondAttribute="height" multiplier="122:39" id="U3x-jY-Xu7"/>
                                             </constraints>
                                         </imageView>
                                         <scrollView multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m5C-Sj-JIO">
-                                            <rect key="frame" x="8" y="128.5" width="236" height="333.5"/>
+                                            <rect key="frame" x="8" y="128" width="236" height="334"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="1SH-t4-DjU">
-                                                    <rect key="frame" x="0.0" y="0.0" width="708" height="333.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="708" height="334"/>
                                                     <subviews>
                                                         <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q0o-VW-VBK">
-                                                            <rect key="frame" x="0.0" y="0.0" width="236" height="333.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="236" height="334"/>
                                                             <connections>
                                                                 <segue destination="3jt-DI-X2d" kind="embed" identifier="bestsellers_1" id="LvR-ea-QgQ"/>
                                                             </connections>
                                                         </containerView>
                                                         <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iyi-M3-r5T">
-                                                            <rect key="frame" x="236" y="0.0" width="236" height="333.5"/>
+                                                            <rect key="frame" x="236" y="0.0" width="236" height="334"/>
                                                             <connections>
                                                                 <segue destination="3jt-DI-X2d" kind="embed" identifier="bestsellers_2" id="sCD-MP-xOX"/>
                                                             </connections>
                                                         </containerView>
                                                         <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="joP-eK-tuA">
-                                                            <rect key="frame" x="472" y="0.0" width="236" height="333.5"/>
+                                                            <rect key="frame" x="472" y="0.0" width="236" height="334"/>
                                                             <connections>
                                                                 <segue destination="3jt-DI-X2d" kind="embed" identifier="bestsellers_3" id="iYf-7i-zH2"/>
                                                             </connections>
@@ -159,10 +159,10 @@
                                             </constraints>
                                         </scrollView>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9tu-wm-KYe">
-                                            <rect key="frame" x="0.0" y="78.5" width="260" height="50"/>
+                                            <rect key="frame" x="0.0" y="78" width="260" height="50"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bestsellers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1e-K9-ycN">
-                                                    <rect key="frame" x="8" y="14" width="87" height="21.5"/>
+                                                    <rect key="frame" x="8" y="14.5" width="87" height="21.5"/>
                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -184,20 +184,33 @@
                                                 <constraint firstItem="w0r-zw-fyL" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="c1e-K9-ycN" secondAttribute="trailing" constant="8" symbolic="YES" id="iAp-iZ-g1n"/>
                                             </constraints>
                                         </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8wb-wq-ge8">
+                                            <rect key="frame" x="50" y="461.5" width="194" height="0.5"/>
+                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="0.5" id="OI6-Z5-cnL"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="Cwp-nu-2Af" secondAttribute="trailing" constant="8" id="7SS-NC-UWa"/>
+                                        <constraint firstAttribute="bottom" secondItem="8wb-wq-ge8" secondAttribute="bottom" id="ATd-GV-KTD"/>
                                         <constraint firstAttribute="trailing" secondItem="9tu-wm-KYe" secondAttribute="trailing" id="B9D-fc-29t"/>
                                         <constraint firstItem="m5C-Sj-JIO" firstAttribute="leading" secondItem="U7m-Jq-8w4" secondAttribute="leading" constant="8" id="HO9-l9-i4x"/>
                                         <constraint firstItem="9tu-wm-KYe" firstAttribute="leading" secondItem="U7m-Jq-8w4" secondAttribute="leading" id="HjZ-C1-GtX"/>
                                         <constraint firstItem="9tu-wm-KYe" firstAttribute="top" secondItem="Cwp-nu-2Af" secondAttribute="bottom" id="J0h-fY-PnB"/>
+                                        <constraint firstAttribute="trailing" secondItem="8wb-wq-ge8" secondAttribute="trailing" constant="16" id="NEO-7B-DGR"/>
                                         <constraint firstItem="Cwp-nu-2Af" firstAttribute="leading" secondItem="U7m-Jq-8w4" secondAttribute="leading" constant="8" id="Tqg-SF-Unn"/>
+                                        <constraint firstItem="8wb-wq-ge8" firstAttribute="leading" secondItem="U7m-Jq-8w4" secondAttribute="leading" constant="50" id="X9W-Yh-Aag"/>
                                         <constraint firstItem="m5C-Sj-JIO" firstAttribute="top" secondItem="9tu-wm-KYe" secondAttribute="bottom" id="XaP-wo-d7h"/>
                                         <constraint firstItem="Cwp-nu-2Af" firstAttribute="top" secondItem="U7m-Jq-8w4" secondAttribute="top" id="Zct-2y-fYY"/>
                                         <constraint firstAttribute="bottom" secondItem="m5C-Sj-JIO" secondAttribute="bottom" id="ZwA-Vw-qgU"/>
                                         <constraint firstAttribute="trailing" secondItem="m5C-Sj-JIO" secondAttribute="trailing" constant="16" id="qsR-6E-lpl"/>
                                     </constraints>
+                                    <connections>
+                                        <outlet property="scrollView" destination="m5C-Sj-JIO" id="AbQ-iN-575"/>
+                                    </connections>
                                 </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="SubcategoryTableViewCell" rowHeight="241" id="dfm-o0-NNj" customClass="SubcategoryTableViewCell" customModule="GoldenScent_Test" customModuleProvider="target">
