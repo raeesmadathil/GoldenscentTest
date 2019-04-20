@@ -59,6 +59,11 @@ class ViewController: UIViewController {
         selectedCategory.subCategories.forEach({$0.isToExpand = false})
         selectedCategory.subCategories.first?.isToExpand    =   true
         tblSubCategories.reloadData()
+        
+        if let headerView = tblSubCategories.tableHeaderView as? HeaderView{
+            headerView.scrollView.setContentOffset(CGPoint.zero, animated: false)
+        }
+        bestSellerVcs.forEach({$0.tableView.reloadData()})
     }
     
     /// to update the height sub categories table headerview, the banner height and width will change according to device, so we need to update the height of headerview also
@@ -194,6 +199,7 @@ class SubcategoryTableViewCell: UITableViewCell {
             
             let toatlItems                      =   CGFloat(category.subCategories.count)
             constraintCollViewHeight.constant   =   ((toatlItems / CGFloat(itemPerRow)) * cellSize.height) + ((toatlItems - 1 ) * space)
+            constraintViewAllHeight.constant    =   40
             imgUpDownArrow.image                =   UIImage(named: "icon_arrow_up")
             collViewSubCategories.reloadData()
         }else{
